@@ -42,7 +42,7 @@ proxy-providers:
   # 优质订阅源 - 请修改为您的订阅链接
   优质服务商: {<<: *BaseProvider, url: '优质订阅源地址', override: {additional-prefix: '[优] '}}
   # 备用订阅源 - 请修改为您的订阅链接
-  备用服务商: {<<: *BaseProvider, url: '备用订阅源地址', override: {additional-prefix: '[备] '}}
+  #备用服务商: {<<: *BaseProvider, url: '备用订阅源地址', override: {additional-prefix: '[备] '}}
 
 # ==================== 监听器 ====================
 listeners:
