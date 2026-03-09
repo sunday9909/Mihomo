@@ -223,6 +223,7 @@ rules:
   - RULE-SET,Games,游戏平台
   - RULE-SET,Crypto,货币平台
   - RULE-SET,Emby,Emby服
+  - DOMAIN-KEYWORD,github,国外流量
   - RULE-SET,Streaming,国际媒体
   - RULE-SET,Apple,苹果服务 
   - RULE-SET,Google,谷歌服务
