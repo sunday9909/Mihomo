@@ -54,7 +54,7 @@ proxy-providers:
   # 优质订阅源 - 优质节点集合，使用时请修改
   优质服务商: {<<: *BaseProvider, url: '优质订阅源地址', override: {additional-prefix: '[优] '}}
   # 备用订阅源 - 次优节点集合，使用时请修改
-  备用服务商: {<<: *BaseProvider, url: '备用订阅源地址', override: {additional-prefix: '[备] '}}
+  #备用服务商: {<<: *BaseProvider, url: '备用订阅源地址', override: {additional-prefix: '[备] '}}
 
 # ==================== 监听器 ====================
 listeners:
