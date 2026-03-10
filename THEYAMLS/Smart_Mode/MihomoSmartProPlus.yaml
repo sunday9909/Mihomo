@@ -54,7 +54,7 @@ proxy-providers:
   # 优质订阅源 - 优质节点集合，使用时请修改
   优质服务商: {<<: *BaseProvider, url: '优质订阅源地址', override: {additional-prefix: '[优] '}}
   # 备用订阅源 - 次优节点集合，使用时请修改
-  #备用服务商: {<<: *BaseProvider, url: '备用订阅源地址', override: {additional-prefix: '[备] '}}
+  备用服务商: {<<: *BaseProvider, url: '备用订阅源地址', override: {additional-prefix: '[备] '}}
 
 # ==================== 监听器 ====================
 listeners:
@@ -94,7 +94,9 @@ authentication:
   - mihomo:yyds666
 skip-auth-prefixes:
   - 192.168.1.0/24
-  - 192.168.31.0/24
+  - 192.168.5.0/24
+  - 192.168.10.0/24
+  - 192.168.15.0/24
   - 192.168.100.0/24
   - 127.0.0.1/8
 
@@ -131,7 +133,7 @@ sniffer:
 
 # TUN模式配置
 tun:
-  enable: false
+  enable: true
   stack: mixed
   dns-hijack:
     - "any:53"
@@ -316,6 +318,7 @@ ClassicalYaml: &ClassicalYaml {type: http, behavior: classical, interval: 3600, 
 # 规则提供者
 rule-providers:  
   # 域名规则
+  Github:         {<<: *BehaviorDN, url: https://raw.githubusercontent.com/666OS/rules/refs/heads/release/mihomo/domain/GitHub.mrs}
   Tracking:       {<<: *BehaviorDN, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/domain/Tracking.mrs}
   Advertising:    {<<: *BehaviorDN, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/domain/Advertising.mrs} 
   Direct:         {<<: *BehaviorDN, url: https://git.imee.me/https://github.com/666OS/rules/raw/release/mihomo/domain/Direct.mrs}
